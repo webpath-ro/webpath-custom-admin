@@ -3,21 +3,22 @@
  * Plugin Name: 🪄 Webpath Custom Admin
  * Plugin URI: https://webpath.ro
  * Description: Webpath Custom Admin
- * Version: 1.0.0
- * Author: Sebastian Patraș
+ * Version: 1.0.1
+ * Author: Webpath
  * Author URI: https://webpath.ro
  * License: GPL2
  */
 
- require 'plugin-update-checker/plugin-update-checker.php';
 
- $myUpdateChecker = Puc_v4_Factory::buildUpdateChecker(
+require plugin_dir_path( __FILE__ ) . 'lib/plugin-update-checker/plugin-update-checker.php';
+use YahnisElsts\PluginUpdateChecker\v5\PucFactory;
+
+$myUpdateChecker = PucFactory::buildUpdateChecker(
     'https://github.com/webpath-ro/webpath-custom-admin/', // GitHub repository URL
     __FILE__, // Full path to the main plugin file
     'webpath-custom-admin' // Plugin slug, must match the plugin folder name
 );
 
-// Optional: Set the branch to check for updates (default is 'master')
 $myUpdateChecker->setBranch('main');
 
  $plugin_data = get_file_data( __FILE__, array( 'Version' => 'Version' ) );
