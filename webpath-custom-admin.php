@@ -3,7 +3,7 @@
  * Plugin Name: 🪄 Webpath Custom Admin
  * Plugin URI: https://webpath.ro
  * Description: Webpath Custom Admin
- * Version: 0.1.0
+ * Version: 0.2.0
  * Author: Sebastian Patraș
  * Author URI: https://webpath.ro
  * License: GPL2
