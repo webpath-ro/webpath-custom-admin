@@ -31,12 +31,16 @@
   width: 239px;
   border-right: 1px solid var(--color-border);
 }
+.woocommerce-layout__header{
+  width: calc(100% - 240px) !important;
+}
 #wpcontent, #wpfooter{
   margin-left: 240px;
+  width: calc(100% - 240px);
 }
 #wpadminbar{
   border-bottom: 1px solid var(--color-border);
-  display: none;
+  /* display: none; */
 }
 #contextual-help-link-wrap{
   display: none;
@@ -44,9 +48,6 @@
 #wpadminbar .quicklinks .menupop ul.ab-sub-secondary,
 #wpadminbar .quicklinks .menupop ul.ab-sub-secondary .ab-submenu {
   background:#fff
-}
-html.wp-toolbar{
-  padding-top: 0;
 }
 #adminmenu li{
   max-width:  200px;
@@ -63,6 +64,7 @@ html.wp-toolbar{
 li.wp-menu-open{
   background: var(--color-highlight);
   border-radius: var(--border-radius);
+  overflow: hidden;
 }
 body {
     background: var(--color-background);
@@ -558,13 +560,6 @@ body {
     color: var(--color-menu-text);
   }
   
-  #wpadminbar .quicklinks .menupop ul li a:hover,
-  #wpadminbar .quicklinks .menupop ul li a:focus,
-  #wpadminbar .quicklinks .menupop ul li a:hover strong,
-  #wpadminbar .quicklinks .menupop ul li a:focus strong,
-  #wpadminbar .quicklinks .ab-sub-wrapper .menupop.hover > a,
-  #wpadminbar .quicklinks .menupop.hover ul li a:hover,
-  #wpadminbar .quicklinks .menupop.hover ul li a:focus,
   #wpadminbar.nojs .quicklinks .menupop:hover ul li a:hover,
   #wpadminbar.nojs .quicklinks .menupop:hover ul li a:focus,
   #wpadminbar li:hover .ab-icon:before,
@@ -576,7 +571,18 @@ body {
   #wpadminbar li.hover .ab-item:before,
   #wpadminbar li:hover #adminbarsearch:before,
   #wpadminbar li #adminbarsearch.adminbar-focused:before {
-    color: var(--color-highlight);
+    color: var(--color-menu-text);
+    background-color: var(--color-highlight)
+  }
+
+  #wpadminbar .quicklinks .menupop ul li a:hover,
+  #wpadminbar .quicklinks .menupop ul li a:focus,
+  #wpadminbar .quicklinks .menupop ul li a:hover strong,
+  #wpadminbar .quicklinks .menupop ul li a:focus strong,
+  #wpadminbar .quicklinks .ab-sub-wrapper .menupop.hover > a,
+  #wpadminbar .quicklinks .menupop.hover ul li a:hover,
+  #wpadminbar .quicklinks .menupop.hover ul li a:focus{
+    color: var(--color-menu-text);
   }
   
   #wpadminbar .quicklinks li a:hover .blavatar,
@@ -625,8 +631,8 @@ body {
   
   /* Admin Bar: my account */
   #wpadminbar .quicklinks li#wp-admin-bar-my-account.with-avatar > a img {
-    border-color: #ffff24;
-    background-color: #ffff24;
+    border-color: var(--color-menu-text);
+    background-color: var(--color-menu-text);
   }
   
   #wpadminbar #wp-admin-bar-user-info .display-name {
@@ -634,17 +640,17 @@ body {
   }
   
   #wpadminbar #wp-admin-bar-user-info a:hover .display-name {
-    color: var(--color-highlight);
+    color: var(--color-menu-text);
   }
   
   #wpadminbar #wp-admin-bar-user-info .username {
-    color: #ff4d00;
+    color: var(--color-menu-text);
   }
   
   /* Pointers */
   .wp-pointer .wp-pointer-content h3 {
     background-color: var(--color-highlight);
-    border-color: #f2f2f2;
+    border-color: #fff;
   }
   
   .wp-pointer .wp-pointer-content h3:before {
