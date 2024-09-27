@@ -16,12 +16,17 @@
     --wp-components-color-accent: #4F46E5;
     --border-radius: 8px;
 }
-
+#dashboard-widgets-wrap{
+  margin: 0;
+}
 .comment-ays, .feature-filter, .popular-tags, .stuffbox, .widgets-holder-wrap, .wp-editor-container, p.popular-tags, table.widefat{
   border-radius: var(--border-radius);
 }
 .menu_pto, .menu_tto{
   display: none !important;
+}
+i.fb-text-primary{
+  color: #fff !important;
 }
 #adminmenu li a.wp-has-current-submenu .update-plugins, #adminmenu li.current a .awaiting-mod{
   background-color: var(--color-notification) !important;
@@ -37,7 +42,9 @@
 #wpcontent, #wpfooter{
   margin-left: 240px;
   width: calc(100% - 240px);
+  box-sizing: border-box;
 }
+
 #wpadminbar{
   border-bottom: 1px solid var(--color-border);
   /* display: none; */
@@ -276,7 +283,7 @@ body {
     color: var(--color-buttons-contrast);
     border-color: var(--color-buttons);
     background-color: var(--color-buttons);
-    border-radius: var(--border-radius);
+    border-radius: var(--border-radius) !important;
   }
 
   .wrap .add-new-h2:hover,
@@ -474,8 +481,7 @@ body {
   
   #adminmenu li.current a .awaiting-mod,
   #adminmenu li a.wp-has-current-submenu .update-plugins,
-  #adminmenu li:hover a .awaiting-mod,
-  #adminmenu li.menu-top:hover > a .update-plugins {
+  #adminmenu li:hover a .awaiting-mod{
     color: var(--color-menu-text);
     background: var(--color-base-menu);
   }
@@ -763,6 +769,10 @@ body {
 .website .dashicons-before::before{
   font-family: "uicons-regular-rounded";
   content: "\ee04";
+}
+.dashicons-admin-generic::before{
+  font-family: "uicons-regular-rounded";
+  content: "\eda3"
 }
 .dashicons-dashboard::before {
   font-family: "uicons-regular-rounded";
