@@ -9,6 +9,17 @@
  * License: GPL2
  */
 
+ require 'plugin-update-checker/plugin-update-checker.php';
+
+ $myUpdateChecker = Puc_v4_Factory::buildUpdateChecker(
+    'https://github.com/webpath-ro/webpath-custom-admin/', // GitHub repository URL
+    __FILE__, // Full path to the main plugin file
+    'webpath-custom-admin' // Plugin slug, must match the plugin folder name
+);
+
+// Optional: Set the branch to check for updates (default is 'master')
+$myUpdateChecker->setBranch('main');
+
  $plugin_data = get_file_data( __FILE__, array( 'Version' => 'Version' ) );
  define( 'CUSTOM_PLUGIN_VERSION', $plugin_data['Version'] );
 
