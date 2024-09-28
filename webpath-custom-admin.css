@@ -482,8 +482,8 @@ body {
   #adminmenu li.current a .awaiting-mod,
   #adminmenu li a.wp-has-current-submenu .update-plugins,
   #adminmenu li:hover a .awaiting-mod{
-    color: var(--color-menu-text);
-    background: var(--color-base-menu);
+    background: var(--color-menu-text);
+    color: var(--color-base-menu);
   }
 
   #adminmenu li.menu-top:hover{
