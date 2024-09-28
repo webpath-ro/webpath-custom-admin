@@ -295,7 +295,6 @@ body {
   }
   .wp-core-ui .button-link:active, .wp-core-ui .button-link:focus, .wp-core-ui .button-link:hover, .wp-core-ui a:hover {
     color: var(--color-links);
-    text-decoration: underline;
   }
   .wp-core-ui .button-link{
     color: var(--color-links);
