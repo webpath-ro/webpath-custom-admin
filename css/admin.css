@@ -783,7 +783,7 @@ body {
     .folded #adminmenu li.current.menu-top {
       color: var(--color-menu-text);
       background: var(--color-highlight);
-      /* border-radius: var(--border-radius) */
+      border-radius: var(--border-radius);
     }
     
     #adminmenu li.wp-has-current-submenu div.wp-menu-image:before,
