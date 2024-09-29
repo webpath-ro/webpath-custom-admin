@@ -33,6 +33,7 @@ $myUpdateChecker->setBranch('main');
 // Hook the function to the admin head action
 add_action( 'admin_head', 'custom_admin_font_preconnect' );
 
+
  // Enqueue CSS for the admin dashboard only
 function custom_plugin_enqueue_admin_styles() {
     wp_enqueue_style(
@@ -44,7 +45,7 @@ function custom_plugin_enqueue_admin_styles() {
     );
     wp_enqueue_style(
         'webpath-custom-admin-css',
-        plugin_dir_url( __FILE__ ) . 'webpath-custom-admin.css',
+        plugin_dir_url( __FILE__ ) . 'css/admin.css',
         array(),
         CUSTOM_PLUGIN_VERSION,
         'all'
@@ -58,6 +59,7 @@ function custom_plugin_enqueue_admin_styles() {
     add_action( 'wp_head', 'custom_plugin_add_google_fonts' );
 }
 add_action( 'admin_enqueue_scripts', 'custom_plugin_enqueue_admin_styles' );
+add_action( 'login_enqueue_scripts', 'custom_plugin_enqueue_admin_styles' );
 
 function custom_admin_enqueue_scripts() {
     // Enqueue the JavaScript file
